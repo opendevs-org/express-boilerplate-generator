@@ -1,0 +1,88 @@
+{
+  "name": "express-boilerplate-generator",
+  "version": "1.0.0",
+  "description": "Generate new express server boilerplate with Typescript and documentation support",
+  "preferGlobal": true,
+  "scripts": {
+    "express-boilerplate-generator": "node lib/cli.js",
+    "start": "node lib/cli.js",
+    "test": "snyk test",
+    "commit-a": "git add . && git cz",
+    "commit": "git cz",
+    "snyk-protect": "snyk protect"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-devs/express-boilerplate-generator.git"
+  },
+  "main": "./lib/cli.js",
+  "module": "./lib/cli.js",
+  "unpkg": "./lib/cli.js",
+  "bin": {
+    "express-gen": "./bin/express-boilerplate-generator.js",
+    "express-ts-gen": "./bin/express-boilerplate-generator.js",
+    "express-typescript-generator": "./bin/express-boilerplate-generator.js"
+  },
+  "keywords": [
+    "generator",
+    "generate",
+    "fast",
+    "boilerplate",
+    "starter",
+    "start",
+    "template",
+    "express",
+    "ex",
+    "mongodb",
+    "mongo",
+    "swagger",
+    "open",
+    "open-api",
+    "gen",
+    "typescript",
+    "ts",
+    "types",
+    "typing",
+    "overnight",
+    "overnightjs",
+    "js",
+    "new",
+    "app",
+    "decorators",
+    "decorate",
+    "test",
+    "testing",
+    "routes",
+    "router",
+    "routing",
+    "express-boilerplate-generator",
+    "express-ts-gen"
+  ],
+  "author": "open devs (open.devs.github@gmail.com)",
+  "contributors": [
+    "Alok Raj (alok722)",
+    "Mihir Kumar (mikr13)"
+  ],
+  "license": "MIT",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/open-devs/express-boilerplate-generator/issues"
+  },
+  "homepage": "https://github.com/open-devs/express-boilerplate-generator#readme",
+  "dependencies": {
+    "cfonts": "^2.8.6",
+    "ncp": "^2.0.0",
+    "prompts": "^2.3.2",
+    "snyk": "^1.414.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "git-cz": "^4.7.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "snyk": true
+}

@@ -1,0 +1,21 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-Y18N-1021887:
+    - snyk > snyk-config > nconf > yargs > y18n:
+        reason: No patch available at the moment
+        expires: '2020-12-10T18:27:47.589Z'
+    - snyk > snyk-nodejs-lockfile-parser > snyk-config > nconf > yargs > y18n:
+        reason: No patch available at the moment
+        expires: '2020-12-10T18:27:47.590Z'
+    - snyk > snyk-docker-plugin > snyk-nodejs-lockfile-parser > snyk-config > nconf > yargs > y18n:
+        reason: None given
+        expires: '2020-12-10T18:27:47.590Z'
+    - snyk > snyk-gradle-plugin > @snyk/java-call-graph-builder > snyk-config > nconf > yargs > y18n:
+        reason: None given
+        expires: '2020-12-10T18:27:47.590Z'
+    - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > snyk-config > nconf > yargs > y18n:
+        reason: None given
+        expires: '2020-12-10T18:27:47.590Z'
+patch: {}

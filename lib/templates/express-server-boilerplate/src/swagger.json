@@ -1,0 +1,203 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Product API",
+        "description": "an *auth-less* [express](https://expressjs.com/) server boilerplate to kickstart your backend development.",
+        "contact": {
+            "name": "opendevs",
+            "url": "https://opendevs.in",
+            "email": "open.devs.github@gmail.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "https://github.com/open-devs/express-server-boilerplate/blob/main/LICENSE"
+        }
+    },
+    "servers": [
+        {
+            "url": "/api/",
+            "description": "localhost"
+        }
+    ],
+    "tags": [
+        {
+            "name": "Products",
+            "description": "API for products in the local mongo database"
+        }
+    ],
+    "paths": {
+        "/product": {
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Get all products from mongo database",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Create a new product in mongo database",
+                "requestBody": {
+                    "description": "Product Object",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/definitions/Product"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "CREATED"
+                    },
+                    "400": {
+                        "description": "Failed. Bad post data."
+                    },
+                    "500": {
+                        "description": "Failed. Server Error."
+                    }
+                }
+            }
+        },
+        "/product/{_id}": {
+            "parameters": [
+                {
+                    "name": "_id",
+                    "in": "path",
+                    "required": true,
+                    "description": "ID of the product that we want to match",
+                    "schema": {
+                        "$ref": "#/definitions/ID"
+                    }
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Get product with given ID",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "_id",
+                        "required": true,
+                        "description": "Product with id",
+                        "schema": {
+                            "$ref": "#/definitions/ID"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Failed. Product not found."
+                    },
+                    "500": {
+                        "description": "Failed. Server Error."
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update product with given ID",
+                "tags": [
+                    "Products"
+                ],
+                "requestBody": {
+                    "description": "Product Object",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/definitions/Product"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "_id",
+                        "required": true,
+                        "description": "Product with new values of properties",
+                        "schema": {
+                            "$ref": "#/definitions/ID"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Failed. Bad post data."
+                    },
+                    "404": {
+                        "description": "Failed. Product not found."
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete product with given ID",
+                "tags": [
+                    "Products"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "_id",
+                        "required": true,
+                        "description": "Delete product with id",
+                        "schema": {
+                            "$ref": "#/definitions/ID"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Failed. Product not found."
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ID": {
+            "properties": {
+                "_id": {
+                    "type": "string(Object ID)"
+                }
+            }
+        },
+        "Product": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "category": {
+                    "type": "string"
+                },
+                "unit": {
+                    "type": "number"
+                }
+            }
+        }
+    }
+}
