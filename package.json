@@ -1,6 +1,6 @@
 {
   "name": "express-boilerplate-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate new express server boilerplate with Typescript and documentation support",
   "preferGlobal": true,
   "scripts": {
