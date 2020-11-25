@@ -1,6 +1,6 @@
 {
   "name": "express-boilerplate-generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate new express server boilerplate with Typescript and documentation support",
   "preferGlobal": true,
   "scripts": {
@@ -56,6 +56,11 @@
     "router",
     "routing",
     "express-boilerplate-generator",
+    "express rest api boilerplate",
+    "express generator",
+    "express typescript generator",
+    "express typescript starter",
+    "typescript express mongoose boilerplate",
     "express-ts-gen"
   ],
   "author": "open devs (open.devs.github@gmail.com)",

@@ -72,11 +72,11 @@ in this application you have two options to setup a project either with or witho
 </thead>
 <tbody>
 <tr>
-<td>express-server-boilerplate</td>
+<td><a href="https://github.com/open-devs/express-boilerplate-generator/blob/master/lib/templates/express-server-boilerplate/README.md" target="_blank">express-server-boilerplate</a></td>
 <td>this type of structure provides auth-less express server boilerplate codes to kickstart your backend development along with the support of typedoc & swagger.</td>
 </tr>
 <tr>
-<td>express-server-boilerplate-auth</td>
+<td><a href="https://github.com/open-devs/express-boilerplate-generator/blob/master/lib/templates/express-server-boilerplate-auth/README.md" target="_blank">express-server-boilerplate-auth</a></td>
 <td>this type of structure provides express server boilerplate codes to kickstart your backend development with authentication support. It uses passport-jwt and passport as dependency.</td>
 </tr>
 </tbody>
