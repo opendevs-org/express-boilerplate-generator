@@ -59,7 +59,7 @@
     "jsonfile": "^6.1.0",
     "nodemon": "^2.0.7",
     "ts-node": "^9.1.1",
-    "tsconfig-paths": "^3.9.0",
+    "tsconfig-paths": "^3.10.1",
     "typedoc": "^0.20.34",
     "typescript": "^4.2.3"
   },
